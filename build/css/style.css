@@ -405,6 +405,32 @@ template {
 .body {
   background-color: #b2b2b2;
 }
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.container {
+  width: 1200px;
+  padding-left: 6%;
+  padding-right: 6%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 20px 0px #333;
+}
+img {
+  width: auto;
+}
 .login {
   display: -ms-flexbox;
   display: flex;
@@ -426,21 +452,6 @@ template {
 .login-link:hover {
   text-shadow: 3px 3px 0.2px #7D0509;
   box-shadow: 4px 4px 20px 0 #000301;
-}
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 .modal {
   display: none;
@@ -620,4 +631,37 @@ input[type="radio"].visually-hidden {
   80% {
     transform: translateX(10px);
   }
+}
+.user-interface {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.user-interface span {
+  font-size: 25px;
+  text-align: center;
+}
+.user-interface a {
+  text-decoration: none;
+  font-size: 27px;
+  color: black;
+  text-transform: uppercase;
+}
+.user-interface a:hover {
+  border-bottom: 1px solid black;
+}
+.starter-message {
+  font-size: 21px;
+  text-align: center;
+  line-height: 35px;
+}
+.warning {
+  text-align: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
 }
